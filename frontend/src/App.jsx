@@ -41,7 +41,7 @@ function App() {
     // Load user data
     console.log("Loading user data... in App.jsx");
     dispatch(loadUser());
-  }, []);
+  }, [dispatch]);
   return (
     <Routes>
       {/* Auth Routes */}
