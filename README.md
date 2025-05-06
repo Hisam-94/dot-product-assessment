@@ -249,8 +249,8 @@ npm start
 
 To test the application, use the following credentials:
 
-- **Email**: `test@example.com`
-- **Password**: `password123`
+- **Email**: `test@gmail.com`
+- **Password**: `test@1321`
 
 ## License
 
