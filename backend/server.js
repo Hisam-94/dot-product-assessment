@@ -15,8 +15,21 @@ dotenv.config();
 // Initialize express app
 const app = express();
 
+// Enable CORS
+const alledOrigins = ['http://localhost:3000', 'https://dot-product-assessment-cjzm.vercel.app'];
+
+const corsOptions = {
+  origin: function (origin, callback) {
+    if (alledOrigins.indexOf(origin) !== -1 || !origin) {
+      callback(null, true);
+    } else {
+      callback(new Error('Not allowed by CORS'));
+    }
+  },
+};
+
 // Middleware
-app.use(cors());
+app.use(cors(corsOptions));
 app.use(express.json());
 
 // Connect to database
